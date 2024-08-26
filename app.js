@@ -1,6 +1,6 @@
 alert('Confirme no botão Allow para confimar o som na pagina!!');
 let listaDeNumerosSorteados = [];
-let limiteDeNumerosNaLista = 50;
+let limiteDeNumerosNaLista = 100;
 let numeroSecreto = gerarNumeroAleatorio();
 let tentativas = 1;
 
@@ -11,7 +11,7 @@ function exibirTextoNaTela(tag, texto) {
 }
 function mostrarMensagenInicial() {
    exibirTextoNaTela('h1', 'Advinhe o número secreto!');
-   exibirTextoNaTela('p', 'Escolha um número entre 1 a 50:'); 
+   exibirTextoNaTela('p', 'Escolha um número entre 1 a 100:'); 
 }
 mostrarMensagenInicial();
 
