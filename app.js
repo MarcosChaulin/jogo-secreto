@@ -10,7 +10,7 @@ function exibirTextoNaTela(tag, texto) {
     responsiveVoice.speak(texto, 'Brazilian Portuguese Female', {rate:1.1});
 }
 function mostrarMensagenInicial() {
-   exibirTextoNaTela('h1', 'Advinhe o número secreto!');
+   exibirTextoNaTela('h1', 'Descubra o número secreto!');
    exibirTextoNaTela('p', 'Escolha um número entre 1 a 100:'); 
 }
 mostrarMensagenInicial();
