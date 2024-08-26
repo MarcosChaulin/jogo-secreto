@@ -1,10 +1,9 @@
 alert('Confirme no botão Allow para confimar o som na pagina!!');
 let listaDeNumerosSorteados = [];
-let limiteDeNumerosNaLista = 10;
+let limiteDeNumerosNaLista = 100;
 let numeroSecreto = gerarNumeroAleatorio();
 let tentativas = 1;
-/* o uso do document.querySelector na function para manipular o h1 onde vai aparecer o 
-titulo e o 'p' no paragrafo e innerHTML para inserir textos no titulo e paragrafo  */
+
 function exibirTextoNaTela(tag, texto) {
     let campo = document.querySelector(tag);
     campo.innerHTML = texto;
@@ -12,11 +11,10 @@ function exibirTextoNaTela(tag, texto) {
 }
 function mostrarMensagenInicial() {
    exibirTextoNaTela('h1', 'Advinhe o número secreto!');
-   exibirTextoNaTela('p', 'Escolha um número entre 1 a 10:'); 
+   exibirTextoNaTela('p', 'Escolha um número entre 1 a 100:'); 
 }
 mostrarMensagenInicial();
-/* o uso do function para fazer a variavel verificarChute ter funcionalidade quando
-for clicado, ira rodar o bloco de codigo */
+
 function verificarChute() { 
     let chute = document.querySelector('input').value;
     if (chute == numeroSecreto){
@@ -34,8 +32,7 @@ function verificarChute() {
         tentativas ++;    
     }   limparCampo();
 }
-/* functions para ter um numero aleatorio novo todo jogo, limpar o campo toda vez que colocar um 
-   número e não for o escolhido e o novo jogo apos acertar o numero o botão novo jogo é liberado*/
+
 function gerarNumeroAleatorio() {
      let numeroEscolhido = parseInt(Math.random() * limiteDeNumerosNaLista + 1);
      let quantidadeElementosNaLista = listaDeNumerosSorteados.length;
